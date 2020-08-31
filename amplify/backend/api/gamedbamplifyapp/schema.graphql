@@ -1,0 +1,110 @@
+type Game
+@model
+@key(name: "byCompany", fields: ["companyId"])
+@key(name: "byEngine", fields: ["engineId"]) {
+  id: ID!
+  name: String!
+  artworks: [String]!
+  cover: String!
+  videos: [String]!
+  screenshots: [String]!
+  ratingCountPop: Int!
+  releaseDate: AWSDate!
+  storyline: String!
+  summary: String!
+  companyId: ID!
+  engineId: ID!
+  company: Company! @connection(fields: ["companyId"])
+  engine: Engine! @connection(fields: ["engineId"])
+  genres: [GameGenre] @connection(keyName: "byGame", fields: ["id"])
+  themes: [GameTheme] @connection(keyName: "byGame", fields: ["id"])
+  simGames: [GameSimGame] @connection(keyName: "byGame", fields: ["id"])
+  platforms: [GamePlatform] @connection(keyName: "byGame", fields: ["id"])
+}
+
+type Company @model {
+  id: ID!
+  name: String!
+  logo: String!
+  country: String!
+  description: String
+  creationDate: AWSDate!
+  games: [Game] @connection(keyName: "byCompany", fields: ["id"])
+}
+
+type Engine @model {
+  id: ID!
+  name: String!
+  url: String!
+  logo: String!
+  platforms: [EnginePlatform] @connection(keyName: "byEngine", fields: ["id"])
+  games: [Game] @connection(keyName: "byEngine", fields: ["id"])
+}
+
+type Platform @model {
+  id: ID!
+  name: String!
+  url: String!
+  logo: String!
+  summary: String!
+  games: [GamePlatform] @connection(keyName: "byPlatform", fields: ["id"])
+  engines: [EnginePlatform] @connection(keyName: "byPlatform", fields: ["id"])
+}
+
+type Theme @model {
+  id: ID!
+  name: String!
+  games: [GameTheme] @connection(keyName: "byTheme", fields: ["id"])
+}
+
+type Genre @model {
+  id: ID!
+  name: String!
+  games: [GameGenre] @connection(keyName: "byGenre", fields: ["id"])
+}
+
+type GameSimGame @model @key(name: "byGame", fields: ["mainGameId"]) {
+  simGame: Game @connection(fields: ["simGameId"])
+  mainGameId: ID!
+  simGameId: ID!
+}
+
+type GameGenre
+@model
+@key(name: "byGame", fields: ["gameId", "genreId"])
+@key(name: "byGenre", fields: ["genreId", "gameId"]) {
+  gameId: ID!
+  genreId: ID!
+  game: Game! @connection(fields: ["gameId"])
+  genre: Genre! @connection(fields: ["genreId"])
+}
+
+type GameTheme
+@model
+@key(name: "byGame", fields: ["gameId", "themeId"])
+@key(name: "byTheme", fields: ["themeId", "gameId"]) {
+  gameId: ID!
+  themeId: ID!
+  game: Game! @connection(fields: ["gameId"])
+  theme: Theme! @connection(fields: ["themeId"])
+}
+
+type GamePlatform
+@model
+@key(name: "byGame", fields: ["gameId", "platformId"])
+@key(name: "byPlatform", fields: ["platformId", "gameId"]) {
+  gameId: ID!
+  platformId: ID!
+  game: Game! @connection(fields: ["gameId"])
+  platform: Theme! @connection(fields: ["platformId"])
+}
+
+type EnginePlatform
+@model
+@key(name: "byEngine", fields: ["engineId", "platformId"])
+@key(name: "byPlatform", fields: ["platformId", "engineId"]) {
+  engineId: ID!
+  platformId: ID!
+  engine: Game! @connection(fields: ["engineId"])
+  platform: Theme! @connection(fields: ["platformId"])
+}
