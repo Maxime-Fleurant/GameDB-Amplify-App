@@ -8,8 +8,8 @@
 					"defaultAuthentication": {
 						"authenticationType": "API_KEY",
 						"apiKeyConfig": {
-							"apiKeyExpirationDays": 7,
-							"description": "gamedbkey"
+							"apiKeyExpirationDays": 100,
+							"description": "key"
 						}
 					},
 					"additionalAuthenticationProviders": []

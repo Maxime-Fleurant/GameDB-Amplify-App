@@ -31,14 +31,14 @@ type Game @model {
 #   # games: [Game] @connection(keyName: "byCompany", fields: ["id"])
 # }
 
-type Engine @model {
-  id: ID!
-  name: String!
-  logo: String
-  igdbId: Int!
-  # platforms: [EnginePlatform] @connection(keyName: "byEngine", fields: ["id"])
-  # games: [Game] @connection(keyName: "byEngine", fields: ["id"])
-}
+# type Engine @model {
+#   id: ID!
+#   name: String!
+#   logo: String
+#   igdbId: Int!
+# platforms: [EnginePlatform] @connection(keyName: "byEngine", fields: ["id"])
+# games: [Game] @connection(keyName: "byEngine", fields: ["id"])
+# }
 
 # type Platform @model {
 #   id: ID!

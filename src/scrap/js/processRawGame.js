@@ -13,6 +13,9 @@ fs.readFile('./data/rawGames.json', (err, data) => {
       game.game_engines.length &&
       game.involved_companies &&
       game.involved_companies.length &&
+      game.platforms &&
+      game.genres &&
+      game.themes &&
       game.name &&
       game.screenshots &&
       game.screenshots.length &&

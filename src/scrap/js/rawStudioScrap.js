@@ -6,7 +6,6 @@ fs.readFile('./data/filteredRawGames.json', (err, data) => {
   const gameArray = JSON.parse(data.toString());
   const videoArray = [];
   gameArray.forEach((element) => {
-    console.log(element.involved_companies);
     videoArray.push(...element.involved_companies);
   });
 
@@ -37,22 +36,27 @@ fs.readFile('./data/filteredRawGames.json', (err, data) => {
       .where(`id = (${part3.join(',')}) & developer=true`)
       .request('/involved_companies');
 
+    console.log(gameArray.length);
     console.log(
       [...response.data, ...response2.data, ...response3.data].length
     );
-    console.log(gameArray.length);
     console.log(
       _.uniqBy([...response.data, ...response2.data, ...response3.data], 'game')
         .length
     );
 
-    // fs.writeFile(
-    //   './data/gameJoinCompany.json',
-    //   JSON.stringify([...response.data, ...response2.data, ...response3.data]),
-    //   () => {
-    //     console.log('done');
-    //   }
-    // );
+    fs.writeFile(
+      './data/gameJoinCompany.json',
+      JSON.stringify(
+        _.uniqBy(
+          [...response.data, ...response2.data, ...response3.data],
+          'game'
+        )
+      ),
+      () => {
+        console.log('done');
+      }
+    );
   };
 
   start();
