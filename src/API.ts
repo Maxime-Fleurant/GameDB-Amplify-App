@@ -2,16 +2,32 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreateBlogInput = {
+export type CreateGameInput = {
   id?: string | null,
   name: string,
+  cover: string,
+  videos: Array< string | null >,
+  screenshots: Array< string | null >,
+  ratingCountPop: number,
+  releaseDate: string,
+  storyline: string,
+  summary: string,
+  igdbId: string,
 };
 
-export type ModelBlogConditionInput = {
+export type ModelGameConditionInput = {
   name?: ModelStringInput | null,
-  and?: Array< ModelBlogConditionInput | null > | null,
-  or?: Array< ModelBlogConditionInput | null > | null,
-  not?: ModelBlogConditionInput | null,
+  cover?: ModelStringInput | null,
+  videos?: ModelStringInput | null,
+  screenshots?: ModelStringInput | null,
+  ratingCountPop?: ModelIntInput | null,
+  releaseDate?: ModelStringInput | null,
+  storyline?: ModelStringInput | null,
+  summary?: ModelStringInput | null,
+  igdbId?: ModelIDInput | null,
+  and?: Array< ModelGameConditionInput | null > | null,
+  or?: Array< ModelGameConditionInput | null > | null,
+  not?: ModelGameConditionInput | null,
 };
 
 export type ModelStringInput = {
@@ -54,27 +70,16 @@ export type ModelSizeInput = {
   between?: Array< number | null > | null,
 };
 
-export type UpdateBlogInput = {
-  id: string,
-  name?: string | null,
-};
-
-export type DeleteBlogInput = {
-  id?: string | null,
-};
-
-export type CreatePostInput = {
-  id?: string | null,
-  title: string,
-  blogID: string,
-};
-
-export type ModelPostConditionInput = {
-  title?: ModelStringInput | null,
-  blogID?: ModelIDInput | null,
-  and?: Array< ModelPostConditionInput | null > | null,
-  or?: Array< ModelPostConditionInput | null > | null,
-  not?: ModelPostConditionInput | null,
+export type ModelIntInput = {
+  ne?: number | null,
+  eq?: number | null,
+  le?: number | null,
+  lt?: number | null,
+  ge?: number | null,
+  gt?: number | null,
+  between?: Array< number | null > | null,
+  attributeExists?: boolean | null,
+  attributeType?: ModelAttributeTypes | null,
 };
 
 export type ModelIDInput = {
@@ -93,83 +98,336 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null,
 };
 
-export type UpdatePostInput = {
+export type UpdateGameInput = {
   id: string,
-  title?: string | null,
-  blogID?: string | null,
+  name?: string | null,
+  cover?: string | null,
+  videos?: Array< string | null > | null,
+  screenshots?: Array< string | null > | null,
+  ratingCountPop?: number | null,
+  releaseDate?: string | null,
+  storyline?: string | null,
+  summary?: string | null,
+  igdbId?: string | null,
 };
 
-export type DeletePostInput = {
+export type DeleteGameInput = {
   id?: string | null,
 };
 
-export type CreateCommentInput = {
+export type CreateStudioInput = {
   id?: string | null,
-  postID: string,
-  content: string,
+  name: string,
+  country?: string | null,
+  description?: string | null,
 };
 
-export type ModelCommentConditionInput = {
-  postID?: ModelIDInput | null,
-  content?: ModelStringInput | null,
-  and?: Array< ModelCommentConditionInput | null > | null,
-  or?: Array< ModelCommentConditionInput | null > | null,
-  not?: ModelCommentConditionInput | null,
+export type ModelStudioConditionInput = {
+  name?: ModelStringInput | null,
+  country?: ModelStringInput | null,
+  description?: ModelStringInput | null,
+  and?: Array< ModelStudioConditionInput | null > | null,
+  or?: Array< ModelStudioConditionInput | null > | null,
+  not?: ModelStudioConditionInput | null,
 };
 
-export type UpdateCommentInput = {
+export type UpdateStudioInput = {
   id: string,
-  postID?: string | null,
-  content?: string | null,
+  name?: string | null,
+  country?: string | null,
+  description?: string | null,
 };
 
-export type DeleteCommentInput = {
+export type DeleteStudioInput = {
   id?: string | null,
 };
 
-export type ModelBlogFilterInput = {
+export type CreateEngineInput = {
+  id?: string | null,
+  name: string,
+};
+
+export type ModelEngineConditionInput = {
+  name?: ModelStringInput | null,
+  and?: Array< ModelEngineConditionInput | null > | null,
+  or?: Array< ModelEngineConditionInput | null > | null,
+  not?: ModelEngineConditionInput | null,
+};
+
+export type UpdateEngineInput = {
+  id: string,
+  name?: string | null,
+};
+
+export type DeleteEngineInput = {
+  id?: string | null,
+};
+
+export type CreatePlatformInput = {
+  id?: string | null,
+  name: string,
+};
+
+export type ModelPlatformConditionInput = {
+  name?: ModelStringInput | null,
+  and?: Array< ModelPlatformConditionInput | null > | null,
+  or?: Array< ModelPlatformConditionInput | null > | null,
+  not?: ModelPlatformConditionInput | null,
+};
+
+export type UpdatePlatformInput = {
+  id: string,
+  name?: string | null,
+};
+
+export type DeletePlatformInput = {
+  id?: string | null,
+};
+
+export type CreateThemeInput = {
+  id?: string | null,
+  name: string,
+};
+
+export type ModelThemeConditionInput = {
+  name?: ModelStringInput | null,
+  and?: Array< ModelThemeConditionInput | null > | null,
+  or?: Array< ModelThemeConditionInput | null > | null,
+  not?: ModelThemeConditionInput | null,
+};
+
+export type UpdateThemeInput = {
+  id: string,
+  name?: string | null,
+};
+
+export type DeleteThemeInput = {
+  id?: string | null,
+};
+
+export type CreateGenreInput = {
+  id?: string | null,
+  name: string,
+};
+
+export type ModelGenreConditionInput = {
+  name?: ModelStringInput | null,
+  and?: Array< ModelGenreConditionInput | null > | null,
+  or?: Array< ModelGenreConditionInput | null > | null,
+  not?: ModelGenreConditionInput | null,
+};
+
+export type UpdateGenreInput = {
+  id: string,
+  name?: string | null,
+};
+
+export type DeleteGenreInput = {
+  id?: string | null,
+};
+
+export type CreateGameGenreInput = {
+  id?: string | null,
+  gameId: string,
+  genreId: string,
+};
+
+export type ModelGameGenreConditionInput = {
+  gameId?: ModelIDInput | null,
+  genreId?: ModelIDInput | null,
+  and?: Array< ModelGameGenreConditionInput | null > | null,
+  or?: Array< ModelGameGenreConditionInput | null > | null,
+  not?: ModelGameGenreConditionInput | null,
+};
+
+export type UpdateGameGenreInput = {
+  id: string,
+  gameId?: string | null,
+  genreId?: string | null,
+};
+
+export type DeleteGameGenreInput = {
+  id?: string | null,
+};
+
+export type CreateGameThemeInput = {
+  id?: string | null,
+  gameId: string,
+  themeId: string,
+};
+
+export type ModelGameThemeConditionInput = {
+  gameId?: ModelIDInput | null,
+  themeId?: ModelIDInput | null,
+  and?: Array< ModelGameThemeConditionInput | null > | null,
+  or?: Array< ModelGameThemeConditionInput | null > | null,
+  not?: ModelGameThemeConditionInput | null,
+};
+
+export type UpdateGameThemeInput = {
+  id: string,
+  gameId?: string | null,
+  themeId?: string | null,
+};
+
+export type DeleteGameThemeInput = {
+  id?: string | null,
+};
+
+export type CreateGamePlatformInput = {
+  gameId: string,
+  platformId: string,
+};
+
+export type ModelGamePlatformConditionInput = {
+  gameId?: ModelIDInput | null,
+  platformId?: ModelIDInput | null,
+  and?: Array< ModelGamePlatformConditionInput | null > | null,
+  or?: Array< ModelGamePlatformConditionInput | null > | null,
+  not?: ModelGamePlatformConditionInput | null,
+};
+
+export type UpdateGamePlatformInput = {
+  gameId?: string | null,
+  platformId?: string | null,
+};
+
+export type DeleteGamePlatformInput = {
+  id?: string | null,
+};
+
+export type ModelGameFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
-  and?: Array< ModelBlogFilterInput | null > | null,
-  or?: Array< ModelBlogFilterInput | null > | null,
-  not?: ModelBlogFilterInput | null,
+  cover?: ModelStringInput | null,
+  videos?: ModelStringInput | null,
+  screenshots?: ModelStringInput | null,
+  ratingCountPop?: ModelIntInput | null,
+  releaseDate?: ModelStringInput | null,
+  storyline?: ModelStringInput | null,
+  summary?: ModelStringInput | null,
+  igdbId?: ModelIDInput | null,
+  and?: Array< ModelGameFilterInput | null > | null,
+  or?: Array< ModelGameFilterInput | null > | null,
+  not?: ModelGameFilterInput | null,
 };
 
-export type ModelPostFilterInput = {
+export type ModelStudioFilterInput = {
   id?: ModelIDInput | null,
-  title?: ModelStringInput | null,
-  blogID?: ModelIDInput | null,
-  and?: Array< ModelPostFilterInput | null > | null,
-  or?: Array< ModelPostFilterInput | null > | null,
-  not?: ModelPostFilterInput | null,
+  name?: ModelStringInput | null,
+  country?: ModelStringInput | null,
+  description?: ModelStringInput | null,
+  and?: Array< ModelStudioFilterInput | null > | null,
+  or?: Array< ModelStudioFilterInput | null > | null,
+  not?: ModelStudioFilterInput | null,
 };
 
-export type ModelCommentFilterInput = {
+export type ModelEngineFilterInput = {
   id?: ModelIDInput | null,
-  postID?: ModelIDInput | null,
-  content?: ModelStringInput | null,
-  and?: Array< ModelCommentFilterInput | null > | null,
-  or?: Array< ModelCommentFilterInput | null > | null,
-  not?: ModelCommentFilterInput | null,
+  name?: ModelStringInput | null,
+  and?: Array< ModelEngineFilterInput | null > | null,
+  or?: Array< ModelEngineFilterInput | null > | null,
+  not?: ModelEngineFilterInput | null,
 };
 
-export type CreateBlogMutationVariables = {
-  input: CreateBlogInput,
-  condition?: ModelBlogConditionInput | null,
+export type ModelPlatformFilterInput = {
+  id?: ModelIDInput | null,
+  name?: ModelStringInput | null,
+  and?: Array< ModelPlatformFilterInput | null > | null,
+  or?: Array< ModelPlatformFilterInput | null > | null,
+  not?: ModelPlatformFilterInput | null,
 };
 
-export type CreateBlogMutation = {
-  createBlog:  {
-    __typename: "Blog",
+export type ModelThemeFilterInput = {
+  id?: ModelIDInput | null,
+  name?: ModelStringInput | null,
+  and?: Array< ModelThemeFilterInput | null > | null,
+  or?: Array< ModelThemeFilterInput | null > | null,
+  not?: ModelThemeFilterInput | null,
+};
+
+export type ModelGenreFilterInput = {
+  id?: ModelIDInput | null,
+  name?: ModelStringInput | null,
+  and?: Array< ModelGenreFilterInput | null > | null,
+  or?: Array< ModelGenreFilterInput | null > | null,
+  not?: ModelGenreFilterInput | null,
+};
+
+export type ModelGameGenreFilterInput = {
+  id?: ModelIDInput | null,
+  gameId?: ModelIDInput | null,
+  genreId?: ModelIDInput | null,
+  and?: Array< ModelGameGenreFilterInput | null > | null,
+  or?: Array< ModelGameGenreFilterInput | null > | null,
+  not?: ModelGameGenreFilterInput | null,
+};
+
+export type ModelGameThemeFilterInput = {
+  id?: ModelIDInput | null,
+  gameId?: ModelIDInput | null,
+  themeId?: ModelIDInput | null,
+  and?: Array< ModelGameThemeFilterInput | null > | null,
+  or?: Array< ModelGameThemeFilterInput | null > | null,
+  not?: ModelGameThemeFilterInput | null,
+};
+
+export type ModelGamePlatformFilterInput = {
+  gameId?: ModelIDInput | null,
+  platformId?: ModelIDInput | null,
+  and?: Array< ModelGamePlatformFilterInput | null > | null,
+  or?: Array< ModelGamePlatformFilterInput | null > | null,
+  not?: ModelGamePlatformFilterInput | null,
+};
+
+export type CreateGameMutationVariables = {
+  input: CreateGameInput,
+  condition?: ModelGameConditionInput | null,
+};
+
+export type CreateGameMutation = {
+  createGame:  {
+    __typename: "Game",
     id: string,
     name: string,
-    posts:  {
-      __typename: "ModelPostConnection",
+    cover: string,
+    videos: Array< string | null >,
+    screenshots: Array< string | null >,
+    ratingCountPop: number,
+    releaseDate: string,
+    storyline: string,
+    summary: string,
+    igdbId: string,
+    genres:  {
+      __typename: "ModelGameGenreConnection",
       items:  Array< {
-        __typename: "Post",
+        __typename: "GameGenre",
         id: string,
-        title: string,
-        blogID: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    themes:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    platforms:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
         createdAt: string,
         updatedAt: string,
       } | null > | null,
@@ -180,23 +438,54 @@ export type CreateBlogMutation = {
   } | null,
 };
 
-export type UpdateBlogMutationVariables = {
-  input: UpdateBlogInput,
-  condition?: ModelBlogConditionInput | null,
+export type UpdateGameMutationVariables = {
+  input: UpdateGameInput,
+  condition?: ModelGameConditionInput | null,
 };
 
-export type UpdateBlogMutation = {
-  updateBlog:  {
-    __typename: "Blog",
+export type UpdateGameMutation = {
+  updateGame:  {
+    __typename: "Game",
     id: string,
     name: string,
-    posts:  {
-      __typename: "ModelPostConnection",
+    cover: string,
+    videos: Array< string | null >,
+    screenshots: Array< string | null >,
+    ratingCountPop: number,
+    releaseDate: string,
+    storyline: string,
+    summary: string,
+    igdbId: string,
+    genres:  {
+      __typename: "ModelGameGenreConnection",
       items:  Array< {
-        __typename: "Post",
+        __typename: "GameGenre",
         id: string,
-        title: string,
-        blogID: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    themes:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    platforms:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
         createdAt: string,
         updatedAt: string,
       } | null > | null,
@@ -207,23 +496,54 @@ export type UpdateBlogMutation = {
   } | null,
 };
 
-export type DeleteBlogMutationVariables = {
-  input: DeleteBlogInput,
-  condition?: ModelBlogConditionInput | null,
+export type DeleteGameMutationVariables = {
+  input: DeleteGameInput,
+  condition?: ModelGameConditionInput | null,
 };
 
-export type DeleteBlogMutation = {
-  deleteBlog:  {
-    __typename: "Blog",
+export type DeleteGameMutation = {
+  deleteGame:  {
+    __typename: "Game",
     id: string,
     name: string,
-    posts:  {
-      __typename: "ModelPostConnection",
+    cover: string,
+    videos: Array< string | null >,
+    screenshots: Array< string | null >,
+    ratingCountPop: number,
+    releaseDate: string,
+    storyline: string,
+    summary: string,
+    igdbId: string,
+    genres:  {
+      __typename: "ModelGameGenreConnection",
       items:  Array< {
-        __typename: "Post",
+        __typename: "GameGenre",
         id: string,
-        title: string,
-        blogID: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    themes:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    platforms:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
         createdAt: string,
         updatedAt: string,
       } | null > | null,
@@ -234,244 +554,872 @@ export type DeleteBlogMutation = {
   } | null,
 };
 
-export type CreatePostMutationVariables = {
-  input: CreatePostInput,
-  condition?: ModelPostConditionInput | null,
+export type CreateStudioMutationVariables = {
+  input: CreateStudioInput,
+  condition?: ModelStudioConditionInput | null,
 };
 
-export type CreatePostMutation = {
-  createPost:  {
-    __typename: "Post",
+export type CreateStudioMutation = {
+  createStudio:  {
+    __typename: "Studio",
     id: string,
-    title: string,
-    blogID: string,
-    blog:  {
-      __typename: "Blog",
+    name: string,
+    country: string | null,
+    description: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateStudioMutationVariables = {
+  input: UpdateStudioInput,
+  condition?: ModelStudioConditionInput | null,
+};
+
+export type UpdateStudioMutation = {
+  updateStudio:  {
+    __typename: "Studio",
+    id: string,
+    name: string,
+    country: string | null,
+    description: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteStudioMutationVariables = {
+  input: DeleteStudioInput,
+  condition?: ModelStudioConditionInput | null,
+};
+
+export type DeleteStudioMutation = {
+  deleteStudio:  {
+    __typename: "Studio",
+    id: string,
+    name: string,
+    country: string | null,
+    description: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type CreateEngineMutationVariables = {
+  input: CreateEngineInput,
+  condition?: ModelEngineConditionInput | null,
+};
+
+export type CreateEngineMutation = {
+  createEngine:  {
+    __typename: "Engine",
+    id: string,
+    name: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateEngineMutationVariables = {
+  input: UpdateEngineInput,
+  condition?: ModelEngineConditionInput | null,
+};
+
+export type UpdateEngineMutation = {
+  updateEngine:  {
+    __typename: "Engine",
+    id: string,
+    name: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteEngineMutationVariables = {
+  input: DeleteEngineInput,
+  condition?: ModelEngineConditionInput | null,
+};
+
+export type DeleteEngineMutation = {
+  deleteEngine:  {
+    __typename: "Engine",
+    id: string,
+    name: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type CreatePlatformMutationVariables = {
+  input: CreatePlatformInput,
+  condition?: ModelPlatformConditionInput | null,
+};
+
+export type CreatePlatformMutation = {
+  createPlatform:  {
+    __typename: "Platform",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdatePlatformMutationVariables = {
+  input: UpdatePlatformInput,
+  condition?: ModelPlatformConditionInput | null,
+};
+
+export type UpdatePlatformMutation = {
+  updatePlatform:  {
+    __typename: "Platform",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeletePlatformMutationVariables = {
+  input: DeletePlatformInput,
+  condition?: ModelPlatformConditionInput | null,
+};
+
+export type DeletePlatformMutation = {
+  deletePlatform:  {
+    __typename: "Platform",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type CreateThemeMutationVariables = {
+  input: CreateThemeInput,
+  condition?: ModelThemeConditionInput | null,
+};
+
+export type CreateThemeMutation = {
+  createTheme:  {
+    __typename: "Theme",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateThemeMutationVariables = {
+  input: UpdateThemeInput,
+  condition?: ModelThemeConditionInput | null,
+};
+
+export type UpdateThemeMutation = {
+  updateTheme:  {
+    __typename: "Theme",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteThemeMutationVariables = {
+  input: DeleteThemeInput,
+  condition?: ModelThemeConditionInput | null,
+};
+
+export type DeleteThemeMutation = {
+  deleteTheme:  {
+    __typename: "Theme",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type CreateGenreMutationVariables = {
+  input: CreateGenreInput,
+  condition?: ModelGenreConditionInput | null,
+};
+
+export type CreateGenreMutation = {
+  createGenre:  {
+    __typename: "Genre",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateGenreMutationVariables = {
+  input: UpdateGenreInput,
+  condition?: ModelGenreConditionInput | null,
+};
+
+export type UpdateGenreMutation = {
+  updateGenre:  {
+    __typename: "Genre",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteGenreMutationVariables = {
+  input: DeleteGenreInput,
+  condition?: ModelGenreConditionInput | null,
+};
+
+export type DeleteGenreMutation = {
+  deleteGenre:  {
+    __typename: "Genre",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type CreateGameGenreMutationVariables = {
+  input: CreateGameGenreInput,
+  condition?: ModelGameGenreConditionInput | null,
+};
+
+export type CreateGameGenreMutation = {
+  createGameGenre:  {
+    __typename: "GameGenre",
+    id: string,
+    gameId: string,
+    genreId: string,
+    game:  {
+      __typename: "Game",
       id: string,
       name: string,
-      posts:  {
-        __typename: "ModelPostConnection",
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    comments:  {
-      __typename: "ModelCommentConnection",
-      items:  Array< {
-        __typename: "Comment",
-        id: string,
-        postID: string,
-        content: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null > | null,
-      nextToken: string | null,
-    } | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type UpdatePostMutationVariables = {
-  input: UpdatePostInput,
-  condition?: ModelPostConditionInput | null,
-};
-
-export type UpdatePostMutation = {
-  updatePost:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    blogID: string,
-    blog:  {
-      __typename: "Blog",
+    },
+    genre:  {
+      __typename: "Genre",
       id: string,
       name: string,
-      posts:  {
-        __typename: "ModelPostConnection",
+      games:  {
+        __typename: "ModelGameGenreConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    comments:  {
-      __typename: "ModelCommentConnection",
-      items:  Array< {
-        __typename: "Comment",
-        id: string,
-        postID: string,
-        content: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null > | null,
-      nextToken: string | null,
-    } | null,
+    },
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type DeletePostMutationVariables = {
-  input: DeletePostInput,
-  condition?: ModelPostConditionInput | null,
+export type UpdateGameGenreMutationVariables = {
+  input: UpdateGameGenreInput,
+  condition?: ModelGameGenreConditionInput | null,
 };
 
-export type DeletePostMutation = {
-  deletePost:  {
-    __typename: "Post",
+export type UpdateGameGenreMutation = {
+  updateGameGenre:  {
+    __typename: "GameGenre",
     id: string,
-    title: string,
-    blogID: string,
-    blog:  {
-      __typename: "Blog",
+    gameId: string,
+    genreId: string,
+    game:  {
+      __typename: "Game",
       id: string,
       name: string,
-      posts:  {
-        __typename: "ModelPostConnection",
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    comments:  {
-      __typename: "ModelCommentConnection",
-      items:  Array< {
-        __typename: "Comment",
-        id: string,
-        postID: string,
-        content: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null > | null,
-      nextToken: string | null,
-    } | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type CreateCommentMutationVariables = {
-  input: CreateCommentInput,
-  condition?: ModelCommentConditionInput | null,
-};
-
-export type CreateCommentMutation = {
-  createComment:  {
-    __typename: "Comment",
-    id: string,
-    postID: string,
-    post:  {
-      __typename: "Post",
+    },
+    genre:  {
+      __typename: "Genre",
       id: string,
-      title: string,
-      blogID: string,
-      blog:  {
-        __typename: "Blog",
-        id: string,
-        name: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null,
-      comments:  {
-        __typename: "ModelCommentConnection",
+      name: string,
+      games:  {
+        __typename: "ModelGameGenreConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    content: string,
+    },
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type UpdateCommentMutationVariables = {
-  input: UpdateCommentInput,
-  condition?: ModelCommentConditionInput | null,
+export type DeleteGameGenreMutationVariables = {
+  input: DeleteGameGenreInput,
+  condition?: ModelGameGenreConditionInput | null,
 };
 
-export type UpdateCommentMutation = {
-  updateComment:  {
-    __typename: "Comment",
+export type DeleteGameGenreMutation = {
+  deleteGameGenre:  {
+    __typename: "GameGenre",
     id: string,
-    postID: string,
-    post:  {
-      __typename: "Post",
+    gameId: string,
+    genreId: string,
+    game:  {
+      __typename: "Game",
       id: string,
-      title: string,
-      blogID: string,
-      blog:  {
-        __typename: "Blog",
-        id: string,
-        name: string,
-        createdAt: string,
-        updatedAt: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
       } | null,
-      comments:  {
-        __typename: "ModelCommentConnection",
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    content: string,
+    },
+    genre:  {
+      __typename: "Genre",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type DeleteCommentMutationVariables = {
-  input: DeleteCommentInput,
-  condition?: ModelCommentConditionInput | null,
+export type CreateGameThemeMutationVariables = {
+  input: CreateGameThemeInput,
+  condition?: ModelGameThemeConditionInput | null,
 };
 
-export type DeleteCommentMutation = {
-  deleteComment:  {
-    __typename: "Comment",
+export type CreateGameThemeMutation = {
+  createGameTheme:  {
+    __typename: "GameTheme",
     id: string,
-    postID: string,
-    post:  {
-      __typename: "Post",
+    gameId: string,
+    themeId: string,
+    game:  {
+      __typename: "Game",
       id: string,
-      title: string,
-      blogID: string,
-      blog:  {
-        __typename: "Blog",
-        id: string,
-        name: string,
-        createdAt: string,
-        updatedAt: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
       } | null,
-      comments:  {
-        __typename: "ModelCommentConnection",
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    content: string,
+    },
+    theme:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type GetBlogQueryVariables = {
+export type UpdateGameThemeMutationVariables = {
+  input: UpdateGameThemeInput,
+  condition?: ModelGameThemeConditionInput | null,
+};
+
+export type UpdateGameThemeMutation = {
+  updateGameTheme:  {
+    __typename: "GameTheme",
+    id: string,
+    gameId: string,
+    themeId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    theme:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteGameThemeMutationVariables = {
+  input: DeleteGameThemeInput,
+  condition?: ModelGameThemeConditionInput | null,
+};
+
+export type DeleteGameThemeMutation = {
+  deleteGameTheme:  {
+    __typename: "GameTheme",
+    id: string,
+    gameId: string,
+    themeId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    theme:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type CreateGamePlatformMutationVariables = {
+  input: CreateGamePlatformInput,
+  condition?: ModelGamePlatformConditionInput | null,
+};
+
+export type CreateGamePlatformMutation = {
+  createGamePlatform:  {
+    __typename: "GamePlatform",
+    gameId: string,
+    platformId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    platform:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateGamePlatformMutationVariables = {
+  input: UpdateGamePlatformInput,
+  condition?: ModelGamePlatformConditionInput | null,
+};
+
+export type UpdateGamePlatformMutation = {
+  updateGamePlatform:  {
+    __typename: "GamePlatform",
+    gameId: string,
+    platformId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    platform:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteGamePlatformMutationVariables = {
+  input: DeleteGamePlatformInput,
+  condition?: ModelGamePlatformConditionInput | null,
+};
+
+export type DeleteGamePlatformMutation = {
+  deleteGamePlatform:  {
+    __typename: "GamePlatform",
+    gameId: string,
+    platformId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    platform:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type GetGameQueryVariables = {
   id: string,
 };
 
-export type GetBlogQuery = {
-  getBlog:  {
-    __typename: "Blog",
+export type GetGameQuery = {
+  getGame:  {
+    __typename: "Game",
     id: string,
     name: string,
-    posts:  {
-      __typename: "ModelPostConnection",
+    cover: string,
+    videos: Array< string | null >,
+    screenshots: Array< string | null >,
+    ratingCountPop: number,
+    releaseDate: string,
+    storyline: string,
+    summary: string,
+    igdbId: string,
+    genres:  {
+      __typename: "ModelGameGenreConnection",
       items:  Array< {
-        __typename: "Post",
+        __typename: "GameGenre",
         id: string,
-        title: string,
-        blogID: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    themes:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    platforms:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
         createdAt: string,
         updatedAt: string,
       } | null > | null,
@@ -482,21 +1430,37 @@ export type GetBlogQuery = {
   } | null,
 };
 
-export type ListBlogsQueryVariables = {
-  filter?: ModelBlogFilterInput | null,
+export type ListGamesQueryVariables = {
+  filter?: ModelGameFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListBlogsQuery = {
-  listBlogs:  {
-    __typename: "ModelBlogConnection",
+export type ListGamesQuery = {
+  listGames:  {
+    __typename: "ModelGameConnection",
     items:  Array< {
-      __typename: "Blog",
+      __typename: "Game",
       id: string,
       name: string,
-      posts:  {
-        __typename: "ModelPostConnection",
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
@@ -506,34 +1470,93 @@ export type ListBlogsQuery = {
   } | null,
 };
 
-export type GetPostQueryVariables = {
+export type GetStudioQueryVariables = {
   id: string,
 };
 
-export type GetPostQuery = {
-  getPost:  {
-    __typename: "Post",
+export type GetStudioQuery = {
+  getStudio:  {
+    __typename: "Studio",
     id: string,
-    title: string,
-    blogID: string,
-    blog:  {
-      __typename: "Blog",
+    name: string,
+    country: string | null,
+    description: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type ListStudiosQueryVariables = {
+  filter?: ModelStudioFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListStudiosQuery = {
+  listStudios:  {
+    __typename: "ModelStudioConnection",
+    items:  Array< {
+      __typename: "Studio",
       id: string,
       name: string,
-      posts:  {
-        __typename: "ModelPostConnection",
-        nextToken: string | null,
-      } | null,
+      country: string | null,
+      description: string | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    comments:  {
-      __typename: "ModelCommentConnection",
+    } | null > | null,
+    nextToken: string | null,
+  } | null,
+};
+
+export type GetEngineQueryVariables = {
+  id: string,
+};
+
+export type GetEngineQuery = {
+  getEngine:  {
+    __typename: "Engine",
+    id: string,
+    name: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type ListEnginesQueryVariables = {
+  filter?: ModelEngineFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListEnginesQuery = {
+  listEngines:  {
+    __typename: "ModelEngineConnection",
+    items:  Array< {
+      __typename: "Engine",
+      id: string,
+      name: string,
+      createdAt: string,
+      updatedAt: string,
+    } | null > | null,
+    nextToken: string | null,
+  } | null,
+};
+
+export type GetPlatformQueryVariables = {
+  id: string,
+};
+
+export type GetPlatformQuery = {
+  getPlatform:  {
+    __typename: "Platform",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGamePlatformConnection",
       items:  Array< {
-        __typename: "Comment",
-        id: string,
-        postID: string,
-        content: string,
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
         createdAt: string,
         updatedAt: string,
       } | null > | null,
@@ -544,29 +1567,21 @@ export type GetPostQuery = {
   } | null,
 };
 
-export type ListPostsQueryVariables = {
-  filter?: ModelPostFilterInput | null,
+export type ListPlatformsQueryVariables = {
+  filter?: ModelPlatformFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListPostsQuery = {
-  listPosts:  {
-    __typename: "ModelPostConnection",
+export type ListPlatformsQuery = {
+  listPlatforms:  {
+    __typename: "ModelPlatformConnection",
     items:  Array< {
-      __typename: "Post",
+      __typename: "Platform",
       id: string,
-      title: string,
-      blogID: string,
-      blog:  {
-        __typename: "Blog",
-        id: string,
-        name: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null,
-      comments:  {
-        __typename: "ModelCommentConnection",
+      name: string,
+      games:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
@@ -576,62 +1591,49 @@ export type ListPostsQuery = {
   } | null,
 };
 
-export type GetCommentQueryVariables = {
+export type GetThemeQueryVariables = {
   id: string,
 };
 
-export type GetCommentQuery = {
-  getComment:  {
-    __typename: "Comment",
+export type GetThemeQuery = {
+  getTheme:  {
+    __typename: "Theme",
     id: string,
-    postID: string,
-    post:  {
-      __typename: "Post",
-      id: string,
-      title: string,
-      blogID: string,
-      blog:  {
-        __typename: "Blog",
+    name: string,
+    games:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
         id: string,
-        name: string,
+        gameId: string,
+        themeId: string,
         createdAt: string,
         updatedAt: string,
-      } | null,
-      comments:  {
-        __typename: "ModelCommentConnection",
-        nextToken: string | null,
-      } | null,
-      createdAt: string,
-      updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
     } | null,
-    content: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type ListCommentsQueryVariables = {
-  filter?: ModelCommentFilterInput | null,
+export type ListThemesQueryVariables = {
+  filter?: ModelThemeFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListCommentsQuery = {
-  listComments:  {
-    __typename: "ModelCommentConnection",
+export type ListThemesQuery = {
+  listThemes:  {
+    __typename: "ModelThemeConnection",
     items:  Array< {
-      __typename: "Comment",
+      __typename: "Theme",
       id: string,
-      postID: string,
-      post:  {
-        __typename: "Post",
-        id: string,
-        title: string,
-        blogID: string,
-        createdAt: string,
-        updatedAt: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
       } | null,
-      content: string,
       createdAt: string,
       updatedAt: string,
     } | null > | null,
@@ -639,18 +1641,22 @@ export type ListCommentsQuery = {
   } | null,
 };
 
-export type OnCreateBlogSubscription = {
-  onCreateBlog:  {
-    __typename: "Blog",
+export type GetGenreQueryVariables = {
+  id: string,
+};
+
+export type GetGenreQuery = {
+  getGenre:  {
+    __typename: "Genre",
     id: string,
     name: string,
-    posts:  {
-      __typename: "ModelPostConnection",
+    games:  {
+      __typename: "ModelGameGenreConnection",
       items:  Array< {
-        __typename: "Post",
+        __typename: "GameGenre",
         id: string,
-        title: string,
-        blogID: string,
+        gameId: string,
+        genreId: string,
         createdAt: string,
         updatedAt: string,
       } | null > | null,
@@ -661,237 +1667,1169 @@ export type OnCreateBlogSubscription = {
   } | null,
 };
 
-export type OnUpdateBlogSubscription = {
-  onUpdateBlog:  {
-    __typename: "Blog",
-    id: string,
-    name: string,
-    posts:  {
-      __typename: "ModelPostConnection",
-      items:  Array< {
-        __typename: "Post",
-        id: string,
-        title: string,
-        blogID: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null > | null,
-      nextToken: string | null,
-    } | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
+export type ListGenresQueryVariables = {
+  filter?: ModelGenreFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
 };
 
-export type OnDeleteBlogSubscription = {
-  onDeleteBlog:  {
-    __typename: "Blog",
-    id: string,
-    name: string,
-    posts:  {
-      __typename: "ModelPostConnection",
-      items:  Array< {
-        __typename: "Post",
-        id: string,
-        title: string,
-        blogID: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null > | null,
-      nextToken: string | null,
-    } | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type OnCreatePostSubscription = {
-  onCreatePost:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    blogID: string,
-    blog:  {
-      __typename: "Blog",
+export type ListGenresQuery = {
+  listGenres:  {
+    __typename: "ModelGenreConnection",
+    items:  Array< {
+      __typename: "Genre",
       id: string,
       name: string,
-      posts:  {
-        __typename: "ModelPostConnection",
+      games:  {
+        __typename: "ModelGameGenreConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    comments:  {
-      __typename: "ModelCommentConnection",
-      items:  Array< {
-        __typename: "Comment",
-        id: string,
-        postID: string,
-        content: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null > | null,
-      nextToken: string | null,
-    } | null,
-    createdAt: string,
-    updatedAt: string,
+    } | null > | null,
+    nextToken: string | null,
   } | null,
 };
 
-export type OnUpdatePostSubscription = {
-  onUpdatePost:  {
-    __typename: "Post",
+export type GetGameGenreQueryVariables = {
+  id: string,
+};
+
+export type GetGameGenreQuery = {
+  getGameGenre:  {
+    __typename: "GameGenre",
     id: string,
-    title: string,
-    blogID: string,
-    blog:  {
-      __typename: "Blog",
+    gameId: string,
+    genreId: string,
+    game:  {
+      __typename: "Game",
       id: string,
       name: string,
-      posts:  {
-        __typename: "ModelPostConnection",
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    comments:  {
-      __typename: "ModelCommentConnection",
-      items:  Array< {
-        __typename: "Comment",
-        id: string,
-        postID: string,
-        content: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null > | null,
-      nextToken: string | null,
-    } | null,
-    createdAt: string,
-    updatedAt: string,
-  } | null,
-};
-
-export type OnDeletePostSubscription = {
-  onDeletePost:  {
-    __typename: "Post",
-    id: string,
-    title: string,
-    blogID: string,
-    blog:  {
-      __typename: "Blog",
+    },
+    genre:  {
+      __typename: "Genre",
       id: string,
       name: string,
-      posts:  {
-        __typename: "ModelPostConnection",
+      games:  {
+        __typename: "ModelGameGenreConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    comments:  {
-      __typename: "ModelCommentConnection",
-      items:  Array< {
-        __typename: "Comment",
-        id: string,
-        postID: string,
-        content: string,
-        createdAt: string,
-        updatedAt: string,
-      } | null > | null,
-      nextToken: string | null,
-    } | null,
+    },
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnCreateCommentSubscription = {
-  onCreateComment:  {
-    __typename: "Comment",
-    id: string,
-    postID: string,
-    post:  {
-      __typename: "Post",
+export type ListGameGenresQueryVariables = {
+  filter?: ModelGameGenreFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListGameGenresQuery = {
+  listGameGenres:  {
+    __typename: "ModelGameGenreConnection",
+    items:  Array< {
+      __typename: "GameGenre",
       id: string,
-      title: string,
-      blogID: string,
-      blog:  {
-        __typename: "Blog",
+      gameId: string,
+      genreId: string,
+      game:  {
+        __typename: "Game",
+        id: string,
+        name: string,
+        cover: string,
+        videos: Array< string | null >,
+        screenshots: Array< string | null >,
+        ratingCountPop: number,
+        releaseDate: string,
+        storyline: string,
+        summary: string,
+        igdbId: string,
+        createdAt: string,
+        updatedAt: string,
+      },
+      genre:  {
+        __typename: "Genre",
         id: string,
         name: string,
         createdAt: string,
         updatedAt: string,
+      },
+      createdAt: string,
+      updatedAt: string,
+    } | null > | null,
+    nextToken: string | null,
+  } | null,
+};
+
+export type GetGameThemeQueryVariables = {
+  id: string,
+};
+
+export type GetGameThemeQuery = {
+  getGameTheme:  {
+    __typename: "GameTheme",
+    id: string,
+    gameId: string,
+    themeId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
       } | null,
-      comments:  {
-        __typename: "ModelCommentConnection",
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    content: string,
+    },
+    theme:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnUpdateCommentSubscription = {
-  onUpdateComment:  {
-    __typename: "Comment",
-    id: string,
-    postID: string,
-    post:  {
-      __typename: "Post",
+export type ListGameThemesQueryVariables = {
+  filter?: ModelGameThemeFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListGameThemesQuery = {
+  listGameThemes:  {
+    __typename: "ModelGameThemeConnection",
+    items:  Array< {
+      __typename: "GameTheme",
       id: string,
-      title: string,
-      blogID: string,
-      blog:  {
-        __typename: "Blog",
+      gameId: string,
+      themeId: string,
+      game:  {
+        __typename: "Game",
+        id: string,
+        name: string,
+        cover: string,
+        videos: Array< string | null >,
+        screenshots: Array< string | null >,
+        ratingCountPop: number,
+        releaseDate: string,
+        storyline: string,
+        summary: string,
+        igdbId: string,
+        createdAt: string,
+        updatedAt: string,
+      },
+      theme:  {
+        __typename: "Theme",
         id: string,
         name: string,
         createdAt: string,
         updatedAt: string,
+      },
+      createdAt: string,
+      updatedAt: string,
+    } | null > | null,
+    nextToken: string | null,
+  } | null,
+};
+
+export type GetGamePlatformQueryVariables = {
+  id: string,
+};
+
+export type GetGamePlatformQuery = {
+  getGamePlatform:  {
+    __typename: "GamePlatform",
+    gameId: string,
+    platformId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
       } | null,
-      comments:  {
-        __typename: "ModelCommentConnection",
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    content: string,
+    },
+    platform:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnDeleteCommentSubscription = {
-  onDeleteComment:  {
-    __typename: "Comment",
-    id: string,
-    postID: string,
-    post:  {
-      __typename: "Post",
-      id: string,
-      title: string,
-      blogID: string,
-      blog:  {
-        __typename: "Blog",
+export type ListGamePlatformsQueryVariables = {
+  filter?: ModelGamePlatformFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListGamePlatformsQuery = {
+  listGamePlatforms:  {
+    __typename: "ModelGamePlatformConnection",
+    items:  Array< {
+      __typename: "GamePlatform",
+      gameId: string,
+      platformId: string,
+      game:  {
+        __typename: "Game",
+        id: string,
+        name: string,
+        cover: string,
+        videos: Array< string | null >,
+        screenshots: Array< string | null >,
+        ratingCountPop: number,
+        releaseDate: string,
+        storyline: string,
+        summary: string,
+        igdbId: string,
+        createdAt: string,
+        updatedAt: string,
+      },
+      platform:  {
+        __typename: "Theme",
         id: string,
         name: string,
         createdAt: string,
         updatedAt: string,
+      },
+      createdAt: string,
+      updatedAt: string,
+    } | null > | null,
+    nextToken: string | null,
+  } | null,
+};
+
+export type OnCreateGameSubscription = {
+  onCreateGame:  {
+    __typename: "Game",
+    id: string,
+    name: string,
+    cover: string,
+    videos: Array< string | null >,
+    screenshots: Array< string | null >,
+    ratingCountPop: number,
+    releaseDate: string,
+    storyline: string,
+    summary: string,
+    igdbId: string,
+    genres:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    themes:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    platforms:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateGameSubscription = {
+  onUpdateGame:  {
+    __typename: "Game",
+    id: string,
+    name: string,
+    cover: string,
+    videos: Array< string | null >,
+    screenshots: Array< string | null >,
+    ratingCountPop: number,
+    releaseDate: string,
+    storyline: string,
+    summary: string,
+    igdbId: string,
+    genres:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    themes:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    platforms:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteGameSubscription = {
+  onDeleteGame:  {
+    __typename: "Game",
+    id: string,
+    name: string,
+    cover: string,
+    videos: Array< string | null >,
+    screenshots: Array< string | null >,
+    ratingCountPop: number,
+    releaseDate: string,
+    storyline: string,
+    summary: string,
+    igdbId: string,
+    genres:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    themes:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    platforms:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateStudioSubscription = {
+  onCreateStudio:  {
+    __typename: "Studio",
+    id: string,
+    name: string,
+    country: string | null,
+    description: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateStudioSubscription = {
+  onUpdateStudio:  {
+    __typename: "Studio",
+    id: string,
+    name: string,
+    country: string | null,
+    description: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteStudioSubscription = {
+  onDeleteStudio:  {
+    __typename: "Studio",
+    id: string,
+    name: string,
+    country: string | null,
+    description: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateEngineSubscription = {
+  onCreateEngine:  {
+    __typename: "Engine",
+    id: string,
+    name: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateEngineSubscription = {
+  onUpdateEngine:  {
+    __typename: "Engine",
+    id: string,
+    name: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteEngineSubscription = {
+  onDeleteEngine:  {
+    __typename: "Engine",
+    id: string,
+    name: string,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreatePlatformSubscription = {
+  onCreatePlatform:  {
+    __typename: "Platform",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdatePlatformSubscription = {
+  onUpdatePlatform:  {
+    __typename: "Platform",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeletePlatformSubscription = {
+  onDeletePlatform:  {
+    __typename: "Platform",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGamePlatformConnection",
+      items:  Array< {
+        __typename: "GamePlatform",
+        gameId: string,
+        platformId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateThemeSubscription = {
+  onCreateTheme:  {
+    __typename: "Theme",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateThemeSubscription = {
+  onUpdateTheme:  {
+    __typename: "Theme",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteThemeSubscription = {
+  onDeleteTheme:  {
+    __typename: "Theme",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameThemeConnection",
+      items:  Array< {
+        __typename: "GameTheme",
+        id: string,
+        gameId: string,
+        themeId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateGenreSubscription = {
+  onCreateGenre:  {
+    __typename: "Genre",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateGenreSubscription = {
+  onUpdateGenre:  {
+    __typename: "Genre",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteGenreSubscription = {
+  onDeleteGenre:  {
+    __typename: "Genre",
+    id: string,
+    name: string,
+    games:  {
+      __typename: "ModelGameGenreConnection",
+      items:  Array< {
+        __typename: "GameGenre",
+        id: string,
+        gameId: string,
+        genreId: string,
+        createdAt: string,
+        updatedAt: string,
+      } | null > | null,
+      nextToken: string | null,
+    } | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateGameGenreSubscription = {
+  onCreateGameGenre:  {
+    __typename: "GameGenre",
+    id: string,
+    gameId: string,
+    genreId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
       } | null,
-      comments:  {
-        __typename: "ModelCommentConnection",
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
         nextToken: string | null,
       } | null,
       createdAt: string,
       updatedAt: string,
-    } | null,
-    content: string,
+    },
+    genre:  {
+      __typename: "Genre",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateGameGenreSubscription = {
+  onUpdateGameGenre:  {
+    __typename: "GameGenre",
+    id: string,
+    gameId: string,
+    genreId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    genre:  {
+      __typename: "Genre",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteGameGenreSubscription = {
+  onDeleteGameGenre:  {
+    __typename: "GameGenre",
+    id: string,
+    gameId: string,
+    genreId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    genre:  {
+      __typename: "Genre",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateGameThemeSubscription = {
+  onCreateGameTheme:  {
+    __typename: "GameTheme",
+    id: string,
+    gameId: string,
+    themeId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    theme:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateGameThemeSubscription = {
+  onUpdateGameTheme:  {
+    __typename: "GameTheme",
+    id: string,
+    gameId: string,
+    themeId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    theme:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteGameThemeSubscription = {
+  onDeleteGameTheme:  {
+    __typename: "GameTheme",
+    id: string,
+    gameId: string,
+    themeId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    theme:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateGamePlatformSubscription = {
+  onCreateGamePlatform:  {
+    __typename: "GamePlatform",
+    gameId: string,
+    platformId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    platform:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateGamePlatformSubscription = {
+  onUpdateGamePlatform:  {
+    __typename: "GamePlatform",
+    gameId: string,
+    platformId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    platform:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteGamePlatformSubscription = {
+  onDeleteGamePlatform:  {
+    __typename: "GamePlatform",
+    gameId: string,
+    platformId: string,
+    game:  {
+      __typename: "Game",
+      id: string,
+      name: string,
+      cover: string,
+      videos: Array< string | null >,
+      screenshots: Array< string | null >,
+      ratingCountPop: number,
+      releaseDate: string,
+      storyline: string,
+      summary: string,
+      igdbId: string,
+      genres:  {
+        __typename: "ModelGameGenreConnection",
+        nextToken: string | null,
+      } | null,
+      themes:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      platforms:  {
+        __typename: "ModelGamePlatformConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
+    platform:  {
+      __typename: "Theme",
+      id: string,
+      name: string,
+      games:  {
+        __typename: "ModelGameThemeConnection",
+        nextToken: string | null,
+      } | null,
+      createdAt: string,
+      updatedAt: string,
+    },
     createdAt: string,
     updatedAt: string,
   } | null,

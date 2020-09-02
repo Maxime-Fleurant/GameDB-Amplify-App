@@ -1,6 +1,6 @@
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import awsconfig from '../../aws-exports';
-import * as mutations from '../../graphql/mutations';
+import * as mutations from '../../graphql/mutations.ts';
 
 const fs = require('fs');
 const _ = require('lodash');
@@ -12,6 +12,7 @@ fs.readFile('../data/finalGame.json', async (err, data) => {
 
   gameArray.forEach(async (elem) => {
     const inp = {
+      id: elem.id,
       name: elem.name,
       cover: elem.cover,
       videos: elem.videos,
