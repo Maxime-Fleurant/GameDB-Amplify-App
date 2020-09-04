@@ -1,0 +1,319 @@
+[
+  { "id": 28, "name": "Infinity Engine", "platforms": [6, 14] },
+  { "id": 153, "name": "LyN", "platforms": [5, 6, 9, 12, 20, 37] },
+  { "id": 31, "name": "Adventure Game Studio" },
+  { "id": 81, "name": "RPG Maker VX Ace" },
+  { "id": 4, "name": "GoldSrc", "platforms": [3, 6, 8, 11, 14, 23] },
+  { "id": 22, "logo": 17, "name": "UbiArt Framework" },
+  {
+    "id": 200,
+    "logo": 35,
+    "name": "Evolution",
+    "platforms": [6, 9, 12, 14, 48, 49]
+  },
+  { "id": 50, "name": "Starbreeze Engine" },
+  { "id": 225, "name": "Phoenix Engine (Relic)", "platforms": [6, 9, 12] },
+  {
+    "id": 95,
+    "logo": 37,
+    "name": "Creation Engine",
+    "platforms": [6, 9, 12, 48, 49]
+  },
+  { "id": 127, "name": "LS3D" },
+  { "id": 35, "name": "Northlight Engine", "platforms": [6, 48, 49] },
+  { "id": 503, "name": "Simplygon" },
+  { "id": 52, "name": "In-house engine" },
+  { "id": 291, "name": "CANVAS Engine", "platforms": [32] },
+  { "id": 515, "name": "Ronin" },
+  { "id": 351, "logo": 52, "name": "Unreal Engine 3" },
+  { "id": 138, "name": "Jedi", "platforms": [6, 13] },
+  { "id": 23, "name": "Serious Engine 4" },
+  { "id": 57, "name": "Real Virtuality" },
+  { "id": 208, "name": "Zero" },
+  { "id": 147, "name": "YETI", "platforms": [6, 9, 12, 38, 41] },
+  { "id": 69, "logo": 30, "name": "Build", "platforms": [3, 6, 13, 14] },
+  { "id": 8, "logo": 12, "name": "Havok" },
+  { "id": 54, "logo": 22, "name": "Gamebryo" },
+  { "id": 346, "name": "Road Hog Engine" },
+  { "id": 118, "name": "Dunia Engine", "platforms": [6, 9, 12, 48, 49] },
+  { "id": 126, "name": "Kinetica", "platforms": [8] },
+  {
+    "id": 179,
+    "logo": 89,
+    "name": "Ren'Py Visual Novel Engine",
+    "platforms": [3, 6, 14, 34, 39, 82]
+  },
+  { "id": 102, "name": "Virtools Engine", "platforms": [6, 8, 11] },
+  {
+    "id": 19,
+    "logo": 125,
+    "name": "Snowdrop",
+    "platforms": [6, 48, 49, 130]
+  },
+  { "id": 46, "name": "Crystal Engine" },
+  { "id": 92, "name": "XnGine" },
+  { "id": 116, "name": "id Tech 1" },
+  { "id": 114, "name": "Crystal Tools" },
+  { "id": 21, "name": "TheEngine", "platforms": [6, 14] },
+  {
+    "id": 3,
+    "logo": 9,
+    "name": "Source",
+    "platforms": [3, 6, 9, 11, 12, 14, 34]
+  },
+  {
+    "id": 27,
+    "name": "Dark Alliance Engine",
+    "platforms": [6, 8, 9, 11, 12, 21, 38]
+  },
+  { "id": 132, "name": "Voxel Plus" },
+  { "id": 286, "name": "Silent Storm Engine" },
+  { "id": 316, "name": "Serious Engine" },
+  { "id": 134, "name": "ZenGin", "platforms": [6] },
+  {
+    "id": 318,
+    "logo": 40,
+    "name": "Silk Engine",
+    "platforms": [6, 9, 12, 48, 49]
+  },
+  { "id": 347, "name": "Visionaire" },
+  { "id": 391, "name": "Dragon Engine" },
+  {
+    "id": 10,
+    "logo": 86,
+    "name": "AnvilNext",
+    "platforms": [6, 9, 12, 41, 46, 48, 49]
+  },
+  {
+    "id": 89,
+    "logo": 28,
+    "name": "PhysX",
+    "platforms": [3, 5, 6, 9, 12, 34, 48, 49]
+  },
+  { "id": 12, "logo": 81, "name": "Telltale Tool" },
+  { "id": 16, "name": "Disrupt" },
+  { "id": 45, "name": "Vision" },
+  { "id": 91, "logo": 26, "name": "PathEngine" },
+  { "id": 172, "name": "id Tech 6" },
+  {
+    "id": 26,
+    "logo": 16,
+    "name": "RAGE",
+    "platforms": [5, 6, 9, 12, 14, 48, 49, 203]
+  },
+  { "id": 214, "name": "COBRA" },
+  { "id": 76, "name": "Jade", "platforms": [5, 6, 8, 9, 11, 12, 21, 38] },
+  { "id": 275, "name": "The Banner Saga Engine" },
+  { "id": 338, "name": "Z-Engine" },
+  { "id": 839, "name": "Unreal Engine 2.5" },
+  { "id": 221, "name": "Game Maker" },
+  {
+    "id": 2,
+    "logo": 7,
+    "name": "Frostbite",
+    "platforms": [6, 9, 12, 48, 49]
+  },
+  { "id": 14, "name": "MT Framework" },
+  { "id": 174, "name": "PhyreEngine" },
+  { "id": 36, "name": "Asura" },
+  { "id": 528, "logo": 71, "name": "Glacier 2" },
+  { "id": 43, "name": "Dark Engine", "platforms": [6] },
+  { "id": 128, "name": "BitSquid" },
+  { "id": 144, "name": "iMUSE", "platforms": [3, 6, 7, 8, 13, 14, 16] },
+  { "id": 454, "name": "ArenaNet Guild Wars" },
+  { "id": 760, "name": "Insomniac Engine" },
+  { "id": 1056, "name": "Super Monkey Ball Engine" },
+  { "id": 480, "logo": 55, "name": "XIGNCODE3", "platforms": [6] },
+  { "id": 481, "logo": 56, "name": "Real Virtuality 4", "platforms": [6] },
+  { "id": 60, "name": "Prism3D" },
+  { "id": 67, "name": "MAX-FX" },
+  {
+    "id": 123,
+    "name": "IW Engine",
+    "platforms": [5, 6, 9, 12, 14, 41, 48, 49]
+  },
+  { "id": 77, "name": "AGOS" },
+  { "id": 212, "logo": 62, "name": "Luminous Studio" },
+  { "id": 152, "name": "Saber3D" },
+  { "id": 840, "name": "RSPiX" },
+  { "id": 513, "logo": 64, "name": "Firebird Engine" },
+  {
+    "id": 42,
+    "logo": 25,
+    "name": "SpeedTree",
+    "platforms": [3, 6, 9, 12, 14, 46, 48, 49]
+  },
+  { "id": 350, "name": "Taito Type X" },
+  { "id": 557, "name": "Source 2", "platforms": [6, 14, 34, 39] },
+  {
+    "id": 404,
+    "logo": 83,
+    "name": "Unity 4",
+    "platforms": [3, 5, 6, 9, 12, 14, 34, 37, 39, 41, 46, 48, 49, 74, 137]
+  },
+  {
+    "id": 55,
+    "logo": 32,
+    "name": "Euphoria Engine",
+    "platforms": [6, 9, 12, 34, 39, 48, 49]
+  },
+  { "id": 61, "logo": 60, "name": "LithTech" },
+  { "id": 9, "name": "Anvil", "platforms": [6, 9, 12, 41, 46] },
+  {
+    "id": 25,
+    "logo": 13,
+    "name": "CryEngine",
+    "platforms": [3, 6, 9, 12, 34, 39, 41, 48, 49]
+  },
+  {
+    "id": 56,
+    "logo": 21,
+    "name": "id Tech 3",
+    "platforms": [3, 6, 8, 11, 14, 23]
+  },
+  {
+    "id": 104,
+    "logo": 82,
+    "name": "MonoGame",
+    "platforms": [3, 6, 14, 34, 39, 46, 48, 49, 130]
+  },
+  {
+    "id": 13,
+    "logo": 73,
+    "name": "Unity",
+    "platforms": [3, 5, 6, 9, 12, 14, 34, 39, 41, 46, 48, 49, 74, 82]
+  },
+  { "id": 479, "logo": 54, "name": "Black Desert Engine", "platforms": [6] },
+  {
+    "id": 78,
+    "logo": 18,
+    "name": "Chrome Engine",
+    "platforms": [6, 9, 12, 48, 49]
+  },
+  { "id": 100, "name": "Nod Engine" },
+  { "id": 325, "name": "Bluepoint Engine" },
+  { "id": 68, "name": "Aurora Engine", "platforms": [6] },
+  { "id": 574, "name": "Apex", "platforms": [6, 48, 49] },
+  { "id": 279, "name": "HPL Engine" },
+  { "id": 103, "name": "Microsoft XNA" },
+  {
+    "id": 610,
+    "logo": 126,
+    "name": "Heaps.io",
+    "platforms": [3, 6, 14, 34, 39, 48, 49, 82, 130]
+  },
+  {
+    "id": 79,
+    "logo": 36,
+    "name": "GameMaker: Studio",
+    "platforms": [3, 6, 9, 14, 34, 39, 46, 48, 49, 74]
+  },
+  { "id": 7, "name": "Scimitar", "platforms": [6, 9, 12] },
+  { "id": 119, "logo": 70, "name": "Glacier" },
+  {
+    "id": 47,
+    "logo": 20,
+    "name": "id Tech 5",
+    "platforms": [6, 9, 12, 14, 48, 49]
+  },
+  { "id": 940, "name": "Sega NAOMI" },
+  { "id": 412, "logo": 84, "name": "Decima", "platforms": [48] },
+  { "id": 17, "name": "Havok Physics" },
+  { "id": 87, "name": "HeroEngine" },
+  { "id": 85, "name": "Gex engine" },
+  { "id": 88, "name": "Genome" },
+  { "id": 547, "logo": 79, "name": "TW Engine 1" },
+  { "id": 90, "name": "Avalanche engine" },
+  { "id": 178, "name": "HPL" },
+  { "id": 75, "name": "Eclipse Engine", "platforms": [6, 9, 12] },
+  { "id": 491, "logo": 61, "name": "Frostbite 3", "platforms": [6] },
+  { "id": 465, "name": "Nvidia PhysX" },
+  { "id": 72, "name": "Odyssey", "platforms": [6, 11, 14] },
+  { "id": 310, "name": "Blam! Engine" },
+  { "id": 366, "name": "Stingray Engine" },
+  { "id": 327, "name": "Infernal Engine" },
+  { "id": 1041, "name": "Despair" },
+  { "id": 84, "name": "Custom built engine" },
+  { "id": 101, "name": "Virtual Theatre" },
+  { "id": 105, "name": "Essence Engine" },
+  { "id": 234, "logo": 78, "name": "TW Engine 3" },
+  { "id": 135, "name": "Geo-Mod" },
+  { "id": 977, "name": "CP System III (CPS-3)" },
+  {
+    "id": 53,
+    "name": "SCUMM",
+    "platforms": [6, 13, 14, 15, 16, 18, 50, 63, 75, 78, 86]
+  },
+  {
+    "id": 601,
+    "name": "Unity 2018",
+    "platforms": [3, 6, 14, 37, 46, 48, 49, 74, 82, 130, 137, 162, 163, 165]
+  },
+  { "id": 677, "name": "Warriors engine" },
+  { "id": 64, "logo": 63, "name": "Adobe Flash Player", "platforms": [82] },
+  {
+    "id": 6,
+    "logo": 11,
+    "name": "Unreal Engine",
+    "platforms": [3, 5, 6, 8, 9, 11, 12, 14, 39]
+  },
+  { "id": 97, "name": "id Tech 2", "platforms": [3, 4, 6, 7, 14] },
+  { "id": 360, "name": "SKALD" },
+  { "id": 145, "name": "GrimE", "platforms": [6, 8, 14] },
+  { "id": 63, "name": "Adobe AIR" },
+  { "id": 149, "name": "Proprietary Engine" },
+  { "id": 183, "name": "RAD Engine 4.0" },
+  { "id": 217, "name": "Lightweight Java Game Library" },
+  { "id": 615, "name": "Sensible Soccer" },
+  { "id": 502, "name": "Autodesk Beast" },
+  { "id": 497, "name": "Hedgehog Engine" },
+  { "id": 752, "name": "The Alan Wake Engine" },
+  {
+    "id": 29,
+    "logo": 24,
+    "name": "Fox Engine",
+    "platforms": [6, 9, 12, 48, 49]
+  },
+  { "id": 487, "name": "Turbine G3" },
+  { "id": 766, "name": "Saber3D Engine" },
+  { "id": 668, "name": "CATHODE Engine" },
+  { "id": 516, "name": "Krome Studios Engine" },
+  { "id": 554, "name": "Wolfenstein 3D Engine" },
+  { "id": 349, "name": "Orochi" },
+  { "id": 439, "logo": 50, "name": "Unreal Engine 4" },
+  {
+    "id": 41,
+    "logo": 41,
+    "name": "RenderWare",
+    "platforms": [5, 6, 8, 9, 11, 12, 14, 21, 38]
+  },
+  { "id": 770, "name": "Turok" },
+  { "id": 254, "name": "AGDS (Advanced Graphic Development System)" },
+  {
+    "id": 24,
+    "logo": 15,
+    "name": "REDengine",
+    "platforms": [6, 12, 14, 48, 49]
+  },
+  {
+    "id": 18,
+    "logo": 33,
+    "name": "4A Engine",
+    "platforms": [3, 6, 9, 12, 14, 48, 49]
+  },
+  { "id": 578, "name": "Liquid Engine" },
+  { "id": 496, "name": "Unreal Engine 2" },
+  { "id": 337, "name": "Void Engine" },
+  { "id": 355, "name": "Titanium" },
+  {
+    "id": 456,
+    "logo": 77,
+    "name": "Godot",
+    "platforms": [3, 6, 14, 34, 39, 73, 82]
+  },
+  { "id": 305, "name": "RPG Maker" },
+  { "id": 476, "name": "OpenFL" },
+  { "id": 193, "name": "STORM Engine" },
+  { "id": 48, "name": "id Tech 4", "platforms": [3, 6, 9, 11, 12, 14] },
+  { "id": 442, "name": "Shark 3D" }
+]

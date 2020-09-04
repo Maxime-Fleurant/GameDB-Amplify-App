@@ -2,7 +2,7 @@ const fs = require('fs');
 const _ = require('lodash');
 const igdb = require('igdb-api-node').default;
 
-fs.readFile('./data/filteredRawGames.json', (err, data) => {
+fs.readFile('../data/finalGame.json', (err, data) => {
   const gameArray = JSON.parse(data.toString());
   const videoArray = [];
   gameArray.forEach((element) => {
@@ -17,11 +17,15 @@ fs.readFile('./data/filteredRawGames.json', (err, data) => {
       .limit(500)
       .where(`id = (${_.uniq(videoArray).join(',')})`)
       .request('/game_engines');
-    console.log(response.data[7]);
+
     console.log(response.data.length);
-    fs.writeFile('./data/engines.json', JSON.stringify([response.data]), () => {
-      console.log('done');
-    });
+    fs.writeFile(
+      '../data/engines2.json',
+      JSON.stringify([response.data]),
+      () => {
+        console.log('done');
+      }
+    );
   };
 
   start();
