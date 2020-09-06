@@ -1,16 +1,24 @@
+import { ApolloProvider } from '@apollo/client';
+import type { AppProps } from 'next/app';
 import { CacheProvider } from '@emotion/core';
 import { cache } from 'emotion';
-import Amplify from 'aws-amplify';
-import awsExports from '../aws-exports';
+import Layout from '../common/components/Layout';
+import Theme from '../common/components/Layout/Theme';
 
-Amplify.configure(awsExports);
+import { useApollo } from '../lib/apollo';
 
-function MyApp({ Component, pageProps }): JSX.Element {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
+  const apolloClient = useApollo(pageProps.initialApolloState);
+
   return (
-    <CacheProvider value={cache}>
-      <Component {...pageProps} />
-    </CacheProvider>
+    <ApolloProvider client={apolloClient}>
+      <CacheProvider value={cache}>
+        <Theme>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Theme>
+      </CacheProvider>
+    </ApolloProvider>
   );
 }
-
-export default MyApp;
