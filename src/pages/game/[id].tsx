@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { initializeApollo } from '../../lib/apollo';
 import {
   Get_Games_Id_StaticDocument,
@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps<
     Get_Single_GameQueryVariables
   >({
     query: Get_Single_GameDocument,
-    variables: { id: Number(params?.id) },
+    variables: { id: BigInt(params?.id) },
   });
 
   return {
@@ -38,17 +38,30 @@ export const getStaticProps: GetStaticProps<
   };
 };
 
-export const getStaticPaths = async () => {
+interface IStaticPath {
+  params: {
+    id: string;
+  };
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
   const apolloClient = initializeApollo();
+  let x: IStaticPath[];
 
   const games = await apolloClient.query<Get_Games_Id_StaticQuery>({
     query: Get_Games_Id_StaticDocument,
   });
 
-  return {
-    paths: games.data?.games.map((el) => {
+  if (games.data) {
+    x = games.data.games.map((el) => {
       return { params: { id: el.id.toString() } };
-    }),
+    });
+  } else {
+    x = [];
+  }
+
+  return {
+    paths: x,
     fallback: true,
   };
 };
